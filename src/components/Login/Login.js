@@ -29,17 +29,14 @@ function Login(props) {
           )
         : undefined;
     if (loginUser === undefined) {
-      alert("Invalid email and passoword");
+      alert("Invalid email and password");
     } else {
       getLogin(loginUser);
     }
   };
 
   const responseFacebook = (response) => {
-    console.log('response ----------- ', response);
      const resp = { name: response.name, email:response.email, imageUrl: response.picture.data.url };
-    // Login(resp);
-    // const resp1 = { name: response.name,email:response.email, imageUrl: response.picture.data.url };
      getLogin(resp);
   };
 
